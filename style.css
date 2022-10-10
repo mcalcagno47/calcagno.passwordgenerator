@@ -1,1 +1,49 @@
+body {
+    background: cadetblue;
+    font-family: 'Courier New', Courier, monospace;
+}
 
+header {
+    color: white;
+    margin: 50px auto;
+    padding: 10px auto;
+    text-align: center;
+}
+
+main {
+    margin: 10px auto;
+}
+
+.generator {
+    color: white;
+    background-color: rgba(116, 76, 190, 0.719);
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.output {
+    display: grid;
+    grid-template-columns: auto;
+    width: auto;
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: brown;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+}
+
+button:hover {
+    font-size: smaller;
+    border-color: white;
+}
