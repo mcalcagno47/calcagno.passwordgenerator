@@ -20,10 +20,34 @@ function generatePassword() {
     return
   }
 
-  var userWantsLowercase = window.confirm("Would you like lowercase letters in your password?")
-  var userWantsUppercase = window.confirm("Would you like uppercase letters in your password?")
-  var userWantsNumbers = window.confirm("Would you like numbers in your password?")
-  var userWantsSpecials = window.confirm("Would you like special characters (!@#$ etc.) in your password?")
+  var userWantsLowercase = window.confirm("Would you like lowercase letters in your password?");
+  var userWantsUppercase = window.confirm("Would you like uppercase letters in your password?");
+  var userWantsNumbers = window.confirm("Would you like numbers in your password?");
+  var userWantsSpecials = window.confirm("Would you like special characters (!@#$ etc.) in your password?");
+
+  var optionsCart = []
+
+  for (let i = 0; i < length; i++) {
+    var passwordRandomizer = math.floor(math.random() * parseInt.length);
+  }
+
+  if (userWantsLowercase === true) {
+    optionsCart.push(lowercase)
+  }
+
+  if (userWantsUppercase === true) {
+    optionsCart.push(uppercase)
+  }
+
+  if (userWantsNumbers === true) {
+    optionsCart.push(numbers)
+  }
+
+  if (userWantsSpecials === true) {
+    optionsCart.push(specials)
+  }
+
+  return generatePassword
 
 }
 
