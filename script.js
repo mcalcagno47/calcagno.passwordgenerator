@@ -3,19 +3,19 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   var input = window.prompt("Using numbers, how many characters in your password?");
-  var length = parseInt(input);
+  var passwordLength = parseInt(input);
   var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   var specials = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "_", "+", "?", ".", ",", ";", ":", "'",];
 
 
-  if (isNaN(length)) {
+  if (isNaN(passwordLength)) {
     window.alert("Please use numbers")
     return
   }
 
-  if (length < 8 || length > 128) {
+  if (passwordLength < 8 || passwordLength > 128) {
     window.alert("Please select a number between 8 and 128")
     return
   }
@@ -27,27 +27,35 @@ function generatePassword() {
 
   var optionsCart = []
 
-  for (let i = 0; i < length; i++) {
-    var passwordRandomizer = math.floor(math.random() * parseInt.length);
-  }
 
   if (userWantsLowercase === true) {
-    optionsCart.push(lowercase)
+    optionsCart.push(...lowercase);
   }
 
   if (userWantsUppercase === true) {
-    optionsCart.push(uppercase)
+    optionsCart.push(...uppercase);
   }
 
   if (userWantsNumbers === true) {
-    optionsCart.push(numbers)
+    optionsCart.push(...numbers);
   }
 
   if (userWantsSpecials === true) {
-    optionsCart.push(specials)
+    optionsCart.push(...specials);
   }
 
-  return generatePassword
+  console.log(optionsCart);
+
+  var generatedPassword = [];
+
+  for (let i = 0; i < passwordLength; i++) {
+    var randomDecimal = Math.random();
+    var randomIndex = Math.floor(randomDecimal * optionsCart.length);
+    var randomCharacter = optionsCart[randomIndex];
+    generatedPassword.push(randomCharacter);
+  }
+  var finalStep = generatedPassword.join('');
+  return finalStep
 
 }
 
