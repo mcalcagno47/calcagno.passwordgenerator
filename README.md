@@ -14,7 +14,7 @@ between lowercase, uppercase, numbers and symbols.  Once the decisions have been
 a string of random characters that the user can copy and utilize as a password.
 
 ## Screenshot
-
+https://github.com/mcalcagno47/calcagno.passwordgenerator/blob/main/images/sprint3homework.png
 
 ## Credits
 Mark Calcagno
